@@ -1,78 +1,52 @@
 /* eslint-disable */
 export const PERSON = {
   name: {
-    first: 'John',
-    middle: '',
-    last: 'Doe',
+    first: '赵吉彤'
   },
-  about: 'Hi, my name is John Doe. I\'m just about the most boring type of person you could possibly imagine. I like collecting leaves from the tree in my back yard and documenting each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.',
-  position: 'Software Developer',
+  position: '软件研发工程师',
   birth: {
-    year: 1990,
-    location: 'New York'
+    year: 1996,
+    location: '河北唐山'
   },
   experience: [{
-      company: 'Company A',
-      position: 'Developer',
-      timeperiod: 'since January 2016',
+      company: '小米科技有限责任公司',
+      position: '软件工程师',
+      timeperiod: '2017年6月至今',
       description: 'Programming and watching cute cat videos.'
     },
     {
-      company: 'Company B',
-      position: 'Frontend Developer',
-      timeperiod: 'January 2015 - December 2015',
+      company: '北京中保汇科技有限公司',
+      position: '前端开发工程师',
+      timeperiod: '2016年7月 - 2016年10月',
       description: 'Fulfillment of extremely important tasks.'
-    },
-    {
-      company: 'Company C',
-      position: 'Trainee',
-      timeperiod: 'March 2014 - December 2014',
-      description: 'Making coffee and baking cookies.'
-    }
-  ],
+    }],
+  projects: [{
+    name: 'Project A',
+    description: 'Programming and watching cute cat videos.'
+  }, {
+    name: 'Project B',
+    description: 'Programming and watching cute cat videos.'
+  }],
   education: [{
-      degree: 'Master of Arts',
-      timeperiod: 'March 2012 - December 2013',
-      description: 'Major in Hacking and Computer Penetration, University A, New York, USA.'
-    },
-    {
-      degree: 'Bachelor of Science',
-      timeperiod: 'March 2009 - December 2011',
-      description: 'Major in Engineering, University B, Los Angeles, USA.'
-    }
-  ],
+      degree: '北京科技大学',
+      timeperiod: '2015年9月 - 2019年6月',
+      description: '2015级 本科生, 专业: 计算机科学与技术'
+    }],
   // skill level goes 0 to 100
   skills: [{
-      name: 'HTML5',
-      level: '99'
-    },
-    {
-      name: 'CSS3',
-      level: '95'
+      name: 'HTML5 & CSS3',
+      level: '70',
+      description: 'Major in Engineering, University B, Los Angeles, USA.'
     },
     {
       name: 'JavaScript',
-      level: '97'
+      level: '90',
+      description: 'Major in Engineering, University B, Los Angeles, USA.'
     },
     {
       name: 'Node.js',
-      level: '93'
-    },
-    {
-      name: 'Angular 2',
-      level: '60'
-    },
-    {
-      name: 'TypeScript',
-      level: '80'
-    },
-    {
-      name: 'ES.Next',
-      level: '70'
-    },
-    {
-      name: 'Docker',
-      level: '99'
+      level: '50',
+      description: 'Major in Engineering, University B, Los Angeles, USA.'
     }
   ],
   skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
@@ -84,5 +58,5 @@ export const PERSON = {
     website: 'johndoe.com',
     github: 'johnyD'
   },
-  lang: 'en' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
+  lang: 'cn' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
 };
