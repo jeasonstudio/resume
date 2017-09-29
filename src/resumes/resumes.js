@@ -4,6 +4,7 @@ import '../resumes/left-right.vue';
 import '../resumes/oblique.vue';
 import '../resumes/side-bar.vue';
 import '../resumes/purple.vue';
+import '../resumes/concise.vue';
 
 import { PERSON } from '../person';
 import { terms } from '../terms';
