@@ -1,8 +1,9 @@
 {
-  "name": "best-resume-ever",
-  "version": "1.0.0",
-  "description": "Build fast and easy multiple beautiful resumes and create your best CV ever! ",
-  "author": "salomonelli",
+  "name": "resume",
+  "version": "6.0.0",
+  "private": true,
+  "description": "My resumes before and now.",
+  "author": "Jeason fork from @salomonelli",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
