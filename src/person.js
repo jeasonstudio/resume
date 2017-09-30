@@ -51,11 +51,11 @@ export const PERSON = {
   ],
   skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
   contact: {
-    email: 'john.doe@email.com',
-    phone: '0123 456789',
-    street: '1234 Broadway',
-    city: 'New York',
-    website: 'johndoe.com',
+    email: 'me@jeasonstudio.cn',
+    phone: '13220101996',
+    street: null,
+    city: null,
+    website: '',
     github: 'johnyD'
   },
   lang: 'cn' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
