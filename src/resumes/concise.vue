@@ -46,33 +46,38 @@
     <div class="content">
       <div class="left">
         <div class="experience">
-          <h3 v-text="lang.headings.experience" />
+          <h4 v-text="lang.headings.experience" />
           <div
             class="experience-part"
             v-for="(experience, index) in person.experience"
             :key="index"
           >
-            <span class="company">
+            <span class="company" v-html="experience.company" />
+            <span class="time-period">
               <span class="job-title" v-text="experience.position" />
-              {{experience.company}}
+              &nbsp;&nbsp;&nbsp;
+              {{experience.timeperiod}}
             </span>
-            <span class="time-period" v-text="experience.timeperiod" />
             <span class="job-description" v-text="experience.description" />
           </div>
         </div>
         <div class="projects">
-          <h3 v-text="lang.headings.projects" />
+          <h4 v-text="lang.headings.projects" />
           <div
             class="projects-part"
             v-for="(project, index) in person.projects"
             :key="index"
           >
             <span class="projects-name" v-text="project.name" />
-            <span class="job-description" v-text="project.description" />
+            <span class="projects-description" v-text="project.description" />
           </div>
         </div>
         <div class="contacts">
-          <h3>{{ lang.headings.contact }}</h3>
+          <h4 v-text="lang.headings.contact" />
+          <span v-if="person.contact.github">
+            <a :href="person.contact.github" v-text="person.contact.github" />
+            <i class="fa fa-github" aria-hidden="true" />
+          </span>
           <span v-if="person.contact.email">
             <a :href="'mailto:'+person.contact.email" v-text="person.contact.email" />
             <i class="fa fa-envelope" aria-hidden="true" />
@@ -89,18 +94,18 @@
       </div>
       <div class="right">
         <div class="education">
-          <h3 v-text="lang.headings.education" />
+          <h4 v-text="lang.headings.education" />
           <div
             class="education-part"
             v-for="(education, index) in person.education"
             :key="index"
           >
             <span class="education-degree" v-text="education.degree" />
-            <span class="education-degree-description" v-text="education.description" />
+            <span class="education-degree-description" v-html="education.description" />
           </div>
         </div>
         <div class="skills">
-          <h3 v-text="lang.headings.skills" />
+          <h4 v-text="lang.headings.skills" />
           <div
             class="skills-part"
             v-for="(skill, index) in person.skills"
@@ -116,10 +121,10 @@
                 <span class="round" :class="{ deep: Number(skill.level) >= 80 }" />
               </div>
             </span>
-            <span class="skill-description" v-text="skill.description" />
+            <span class="skill-description" v-html="skill.description" />
           </div>
         </div>
-        <span class="skill-other" v-text="person.skillDescription" />
+        <span class="skill-other" v-html="person.skillDescription" />
       </div>
     </div>
     <div class="footer">
@@ -148,7 +153,7 @@
   a, a:focus, a:hover, a:visited {
     color:#616161;
   }
-  h3 {
+  h4 {
     margin-top: 12px;
     margin-bottom: 0;
     border-bottom: 1px solid black;
@@ -219,24 +224,17 @@
           flex-flow: column nowrap;
           align-items: flex-end;
           span.company {
-            font-weight:bold;
             padding-bottom:3px;
             padding-top:5px;
-            color:#424242;
           }
           span.job-title {
             font-style:italic;
             font-size: smaller;
             font-weight: 300;
           }
-          span.time-period {
-            font-size: smaller;
-          }
           span.projects-name {
-            font-weight:bold;
             padding-bottom:3px;
             padding-top:5px;
-            color:#424242;
           }
         }
       }
@@ -251,19 +249,12 @@
         align-items: flex-start;
         .education-part,.skills-part {
           display: flex;
+          width: 100%;
           flex-flow: column nowrap;
           align-items: flex-start;
           span.education-degree {
-            font-weight: bold;
             padding-bottom: 3px;
             padding-top: 5px;
-            color: #424242;
-          }
-          span.education-degree-description {
-            font-size: smaller;
-          }
-          span.skill-description {
-            font-size: smaller;
           }
           span.skill-name {
             display: flex;
@@ -276,8 +267,14 @@
         }
       }
     }
-    span.skill-other {
+    span.skill-other,
+    .projects-description,
+    .skill-description,
+    .job-description,
+    .education-degree-description,
+    .time-period {
       font-size: smaller;
+      color:#424242;
     }
   }
   .bar {
