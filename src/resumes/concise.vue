@@ -68,26 +68,26 @@
             v-for="(project, index) in person.projects"
             :key="index"
           >
-            <span class="projects-name" v-text="project.name" />
+            <span class="projects-name" v-html="project.name" />
             <span class="projects-description" v-text="project.description" />
           </div>
         </div>
         <div class="contacts">
           <h4 v-text="lang.headings.contact" />
           <span v-if="person.contact.github">
-            <a :href="person.contact.github" v-text="person.contact.github" />
+            <a target="_blank" :href="person.contact.github" v-text="person.contact.github" />
             <i class="fa fa-github" aria-hidden="true" />
           </span>
           <span v-if="person.contact.email">
-            <a :href="'mailto:'+person.contact.email" v-text="person.contact.email" />
+            <a target="_blank" :href="'mailto:'+person.contact.email" v-text="person.contact.email" />
             <i class="fa fa-envelope" aria-hidden="true" />
           </span>
           <span v-if="person.contact.phone">
-            <a :href="'tel:'+person.contact.phone" v-text="person.contact.phone" />
+            <a target="_blank" :href="'tel:'+person.contact.phone" v-text="person.contact.phone" />
             <i class="fa fa-phone" aria-hidden="true" />
           </span>
           <span v-if="person.contact.website">
-            <a :href="person.contact.website" v-text="person.contact.website" />
+            <a target="_blank" :href="person.contact.website" v-text="person.contact.website" />
             <i class="fa fa-globe" aria-hidden="true" />
           </span>
         </div>
@@ -128,7 +128,7 @@
       </div>
     </div>
     <div class="footer">
-      Copyright &copy; 2017 <a href="https://github.com">JeasonStudio</a>
+      Copyright &copy; 2017 <a target="_blank" :href="person.contact.github">JeasonStudio</a>
     </div>
   </div>
 </template>

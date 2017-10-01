@@ -2,8 +2,8 @@
 const en = {
   headings: {
     contact: 'Contact',
-    experience: 'Experience',
-    projects: 'Projects',
+    experience: 'Internship Experience',
+    projects: 'Personal Projects',
     education: 'Education',
     skills: 'Skills',
     about: 'About me'
