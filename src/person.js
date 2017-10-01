@@ -83,31 +83,31 @@ export const PERSON = {
       company: 'Xiaomi Technology Co., Ltd',
       position: 'Software Developer',
       timeperiod: 'since June 2017',
-      description: '负责内部运营平台的前后端开发(React 全家桶 & Koa@2.x), 对 Graphql 有着深入实践'
+      description: 'Responsible for the development of Audio Operating Platform(React, Koa and Graphql)'
     }, {
       company: 'Zhongbaohui Technology Co., Ltd',
-      position: 'Front-end Developer',
+      position: 'Web Developer',
       timeperiod: 'July 2016 - October 2016',
-      description: '参与包括 `贝壳校园` 平台及微信端前端/小程序开发, 技术栈为 angularjs@1.x & WeUI'
+      description: 'Participated in the development of `BeikeCampus` and WeChatAPP with angularjs@1.x and WeUI.'
     }],
   projects: [{
-    name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/CN-VScode-Docs"><i class="fa fa-link" aria-hidden="true" /> VSCode 文档翻译</a>',
-    description: '在 Github 开源, 已有 420+ star, 130+ fork'
+    name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/CN-VScode-Docs"><i class="fa fa-link" aria-hidden="true" /> VSCode Doc translation</a>',
+    description: 'Open source in Github with 420+ star, 130+ fork'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/hulk"><i class="fa fa-link" aria-hidden="true" /> Hulk.js</a>',
-    description: '提供 Restful API Mock 服务的 Express 中间件'
+    description: 'An Express MiddleWare provides Mock data service for Restful API.'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/Ripples.wxss"><i class="fa fa-link" aria-hidden="true" /> Ripples.wxss</a>',
-    description: '微信小程序的 css3 动效库'
+    description: 'CSS3 Animation library for WeChatAPP.'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/iWeAther-APP"><i class="fa fa-link" aria-hidden="true" /> iWeAther-APP</a>',
-    description: '基于 VueJS & PWA  技术的天气 APP'
+    description: 'A weather webapp based on VueJS & PWA'
   }, {
-    name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio?utf8=%E2%9C%93&tab=repositories&q=&type=&language=go"><i class="fa fa-link" aria-hidden="true" /> GoLang 项目</a>',
-    description: '开发过北科大教务系统 & 知乎爬虫, 相关图像处理如: 高斯模糊, 图像单色, 边缘检测等'
+    name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio?utf8=%E2%9C%93&tab=repositories&q=&type=&language=go"><i class="fa fa-link" aria-hidden="true" /> GoLang projects</a>',
+    description: 'Web crawler of USTB edu system and zhihu, Simple image processing: GaussianBlur, Edge detection and so on.'
   }],
   education: [{
-      degree: '北京科技大学',
+      degree: 'USTB',
       timeperiod: '2015年9月 - 2019年6月',
       description: '2015级 本科生, 专业: 计算机科学与技术<br />所获荣誉: 中国大学生计算机设计大赛国家一等奖; "蓝桥杯"团体赛国家二等奖等'
     }],
@@ -115,7 +115,7 @@ export const PERSON = {
   skills: [{
       name: 'HTML5 & CSS3',
       level: '70',
-      description: '熟悉语义化网页开发, 熟练使用 flex 布局, 具备工程化的前端思维, 对待细节十分认真;'
+      description: 'Worked in both Agile and Waterfall settings.熟练使用 flex 布局, 具备工程化的前端思维, 对待细节十分认真;'
     }, {
       name: 'JavaScript',
       level: '90',
