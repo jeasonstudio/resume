@@ -108,28 +108,28 @@ export const PERSON = {
   }],
   education: [{
       degree: 'USTB',
-      timeperiod: '2015年9月 - 2019年6月',
-      description: '2015级 本科生, 专业: 计算机科学与技术<br />所获荣誉: 中国大学生计算机设计大赛国家一等奖; "蓝桥杯"团体赛国家二等奖等'
+      timeperiod: 'September 2015 - June 2019',
+      description: 'Junior students, major in computer science<br />Honors: Chinese College Computer Design Competition national first prize; "LanQiao Cup" national second prize and so on;'
     }],
   // skill level goes 0 to 100
   skills: [{
       name: 'HTML5 & CSS3',
       level: '70',
-      description: 'Worked in both Agile and Waterfall settings.熟练使用 flex 布局, 具备工程化的前端思维, 对待细节十分认真;'
+      description: 'Worked in both Agile and Waterfall settings. Skilled use flex layout.'
     }, {
       name: 'JavaScript',
       level: '90',
-      description: '熟练使用 ES2016+, 熟悉 ReactJS 全家桶, 掌握 Angular, VueJS 的使用, 了解其原理;'
+      description: 'Skilled use ES2016+, can build webapp via React, VueJS, angular.js.'
     }, {
       name: 'Node.js',
       level: '50',
-      description: '掌握 Express, koa 的使用, 熟练使用单元测试, 比较熟悉 HTTP 协议, 掌握 MySQL MongoDB 的使用;'
+      description: 'Skilled use Express, koa and Unit Testing, familiar with HTTP protocol,Understand the use of MySQL & MongoDB'
     }, {
       name: 'GoLang',
       level: '50',
-      description: '有 GoLang 后端开发和数据库中间层开发实践, 掌握爬虫编写(如爬取学校教务系统, 知乎等);用 Go 进行图像处理(高斯模糊, 边缘检测等);'
+      description: 'Have the experience to build backend server, database middleware, web crawler and Image Processing via GoLang'
     }],
-  skillDescription: '<br />熟练使用 RestfulAPI 及 Graphql 标准, 熟悉前端调试及 JS 性能优化;<br />有一定的数据结构和算法设计基础, 热爱开源;<br />熟练掌握盒模型及浏览器兼容性, 熟悉 Git 及 Gitflow, 熟悉 Linux 基本操作, 具备全栈开发能力;<br />热爱生活, 热爱运动;',
+  skillDescription: '<br />Familiar with RestfulAPI and Graphql, knows how to dubug and performance optimization<br />There are data structures and algorithmic design basis and I like open source.<br />Familiar with Git, Gitflow and Linux, with full stack development capabilities;<br />I love life, love sports',
   contact: {
     email: 'me@jeasonstudio.cn',
     phone: '13220101996',
