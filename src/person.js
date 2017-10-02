@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const PERSON_cn = {
+export const PERSON = {
   name: {
     first: '赵吉彤'
   },
@@ -58,7 +58,7 @@ export const PERSON_cn = {
       level: '50',
       description: '有 GoLang 后端开发和数据库中间层开发实践, 掌握爬虫编写(如爬取学校教务系统, 知乎等);用 Go 进行图像处理(高斯模糊, 边缘检测等);'
     }],
-  skillDescription: '<br />熟练使用 RestfulAPI 及 Graphql 标准, 熟悉前端调试及 JS 性能优化;<br />有一定的数据结构和算法设计基础, 热爱开源;<br />熟练掌握盒模型及浏览器兼容性, 熟悉 Git 及 Gitflow, 熟悉 Linux 基本操作, 具备全栈开发能力;<br />热爱生活, 热爱运动;',
+  skillDescription: '<br />熟悉 RestfulAPI 及 Graphql, 熟悉前端调试及 JS 性能优化;<br />有一定的数据结构和算法设计基础, 热爱开源;<br />熟练掌握盒模型及浏览器兼容性, 熟悉 Git 及 Gitflow, 熟悉 Linux 基本操作, 具备全栈开发能力;<br />热爱生活, 热爱运动;',
   contact: {
     email: 'me@jeasonstudio.cn',
     phone: '13220101996',
@@ -70,7 +70,7 @@ export const PERSON_cn = {
   lang: 'cn' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
 };
 
-export const PERSON = {
+export const PERSON_en = {
   name: {
     first: 'Jeason'
   },
