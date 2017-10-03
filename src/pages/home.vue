@@ -1,50 +1,139 @@
 <template>
-<div class="home">
-  <a href="https://github.com/salomonelli/best-resume-ever" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-  <div class="logo">
-    <img src="../assets/logo.png" />
-  </div>
-  <h3 class="title">Jeason-resume</h3>
-  <div class="previews">
-    <div class="preview">
-      <router-link v-bind:to="'/resume/material-dark'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-material-dark.png" />
-          <span>material-dark</span>
+<div class="page-wrapper">
+  <div class="page">
+    <div class="page-inner">
+      <div class="resume" id="concise">
+        <div class="row">
+          <div class="image">
+            <div class="img"></div>
+          </div>
         </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/left-right'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-left-right.png" />
-          <span>left-right</span>
+        <div class="row">
+          <span class="name" v-text="person.name.first" />
         </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/oblique'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-oblique.png" />
-          <span>oblique</span>
+        <div class="row">
+          <span
+            class="position"
+            v-text="person.position"
+          />
         </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/side-bar'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-side-bar.png" />
-          <span>side-bar</span>
+        <div class="row labels">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-JS"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-socialcss3"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-html-copy"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-nodejs"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-git"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-vuejs"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-react"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-angular-logo"></use>
+          </svg>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-gopher"></use>
+          </svg>
         </div>
-      </router-link>
-    </div>
-    <div class="preview">
-      <router-link v-bind:to="'/resume/purple'">
-        <div class="preview-wrapper">
-          <img src="../assets/preview/resume-purple.png" />
-          <span>purple</span>
+        <div class="content">
+          <div class="left">
+            <div class="experience">
+              <h4 v-text="lang.headings.experience" />
+              <div
+                class="experience-part"
+                v-for="(experience, index) in person.experience"
+                :key="index"
+              >
+                <span class="company" v-html="experience.company" />
+                <span class="time-period">
+                  <span class="job-title" v-text="experience.position" />
+                  &nbsp;&nbsp;&nbsp;
+                  {{experience.timeperiod}}
+                </span>
+                <span class="job-description" v-text="experience.description" />
+              </div>
+            </div>
+            <div class="projects">
+              <h4 v-text="lang.headings.projects" />
+              <div
+                class="projects-part"
+                v-for="(project, index) in person.projects"
+                :key="index"
+              >
+                <span class="projects-name" v-html="project.name" />
+                <span class="projects-description" v-text="project.description" />
+              </div>
+            </div>
+            <div class="contacts">
+              <h4 v-text="lang.headings.contact" />
+              <span v-if="person.contact.github">
+                <a target="_blank" :href="person.contact.github" v-text="person.contact.github" />
+                <i class="fa fa-github" aria-hidden="true" />
+              </span>
+              <span v-if="person.contact.email">
+                <a target="_blank" :href="'mailto:'+person.contact.email" v-text="person.contact.email" />
+                <i class="fa fa-envelope" aria-hidden="true" />
+              </span>
+              <span v-if="person.contact.phone">
+                <a target="_blank" :href="'tel:'+person.contact.phone" v-text="person.contact.phone" />
+                <i class="fa fa-phone" aria-hidden="true" />
+              </span>
+              <span v-if="person.contact.website">
+                <a target="_blank" :href="person.contact.website" v-text="person.contact.website" />
+                <i class="fa fa-globe" aria-hidden="true" />
+              </span>
+            </div>
+          </div>
+          <div class="right">
+            <div class="education">
+              <h4 v-text="lang.headings.education" />
+              <div
+                class="education-part"
+                v-for="(education, index) in person.education"
+                :key="index"
+              >
+                <span class="education-degree" v-text="education.degree" />
+                <span class="education-degree-description" v-html="education.description" />
+              </div>
+            </div>
+            <div class="skills">
+              <h4 v-text="lang.headings.skills" />
+              <div
+                class="skills-part"
+                v-for="(skill, index) in person.skills"
+                :key="index"
+              >
+                <span class="skill-name">
+                  <span v-text="skill.name" />
+                  <div class="bar">
+                    <span class="round deep" />
+                    <span class="round" :class="{ deep: Number(skill.level) >= 20 }" />
+                    <span class="round" :class="{ deep: Number(skill.level) >= 40 }" />
+                    <span class="round" :class="{ deep: Number(skill.level) >= 60 }" />
+                    <span class="round" :class="{ deep: Number(skill.level) >= 80 }" />
+                  </div>
+                </span>
+                <span class="skill-description" v-html="skill.description" />
+              </div>
+            </div>
+            <span class="skill-other" v-html="person.skillDescription" />
+          </div>
         </div>
-      </router-link>
+        <div class="footer">
+          Copyright &copy; 2017 <a target="_blank" :href="person.contact.github">JeasonStudio</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -52,76 +141,230 @@
 
 <script>
 import Vue from 'vue';
+// export default Vue.component('resume', {
+//   name: 'app'
+// });
+import * as chromeShadowFixer from './chromeShadowFixer';
+import { PERSON } from '../person';
+import { terms } from '../terms';
+
 export default Vue.component('resume', {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      person: PERSON,
+      terms: terms
+    };
+  },
+  computed: {
+    lang () {
+      return this.terms[this.person.lang];
+    }
+  },
+  mounted: () => {
+    const els = chromeShadowFixer.fix();
+    if (
+      els &&
+      els.length > 0
+    ) window.onhashchange = () => { location.reload(); };
+  }
 });
 </script>
 
-<style scoped>
-.home {
-  font-family: 'Roboto' !important;
-}
-
-.logo {
-  text-align: center;
-}
-
-.logo img {
-  height: 50px;
-  margin-top: 40px;
-}
-
-.title {
-  font-weight: normal;
-  text-align: center;
+<style lang="less" scoped>
+.page-inner{
+  height: 100%;
   width: 100%;
-  color: black;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 110%;
-  margin: 1.78rem 0 1.424rem 0;
-  margin-top: 0px;
-  margin-bottom: 40px;
+}
+.page-wrapper {
+  overflow-x: hidden;
+  background: #CCCCCC;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  box-sizing: border-box;
 }
 
-.previews {
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+.resume {
+  height: 100%;
+  width: 100%;
 }
 
-.preview {
-  width: 180px;
-  float: left;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
-  margin-bottom: 1.5%;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  height: 252px;
-  overflow: hidden;
-}
-
-.preview-wrapper {
-  position: relative;
+.page {
   background: white;
+  position: relative;
+  width: 21cm;
+  height: 29.68cm;
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  page-break-after: auto;
+  overflow: hidden;
+  // box-shadow: 0 0 5px #666;
 }
 
-.preview img {
-  width: 100%;
-  opacity: 0.5;
-  filter: blur(1px);
-}
-
-.preview span {
-  position: absolute;
-  max-width: 100%;
-  font-size: 24px;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
+#concise {
+  font-family:'Source Sans Pro', sans-serif;
+  font-size:20px;
+  padding-bottom:50px;
+  display: flex;
+  flex-flow: column nowrap;
+  a, a:focus, a:hover, a:visited {
+    color:#616161;
+  }
+  h4 {
+    margin-top: 12px;
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+  }
+  span {
+    display:inline-block;
+  }
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  .labels {
+    margin: 0 auto 10px auto;
+    svg {
+      margin: 0 2px;
+    }
+  }
+  .image {
+    width:130px;
+    height:130px;
+    margin: 60px auto 20px auto;
+    .img {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background-image:url('../assets/person.jpg');
+      background-repeat:none;
+      background-position:center;
+      background-size:cover;
+    }
+  }
+  .name {
+    border-bottom:1px solid black;
+    text-transform:uppercase;
+    padding:5px 30px;
+    margin-bottom:5px;
+    font-family:'Open Sans', sans-serif;
+    font-size:35px;
+    font-weight:600;
+    letter-spacing:10px;
+  }
+  .position {
+    text-transform:uppercase;
+    font-family:'Open Sans', sans-serif;
+    font-size:small;
+    color:#757575;
+    margin-bottom:10px;
+  }
+  .content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    flex-grow: 2;
+    .left {
+      flex-grow: 1;
+      width: 50%;
+      padding: 0 15px 0 30px;
+      span {
+        text-align: right;
+      }
+      .experience,.projects,.contacts {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        .experience-part,.projects-part {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-end;
+          span.company {
+            padding-bottom:3px;
+            padding-top:5px;
+          }
+          span.job-title {
+            font-style:italic;
+            font-size: smaller;
+            font-weight: 300;
+          }
+          span.projects-name {
+            padding-bottom:3px;
+            padding-top:5px;
+          }
+        }
+      }
+    }
+    .right {
+      flex-grow: 1;
+      width: 50%;
+      padding: 0 30px 0 15px;
+      .education,.skills {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        .education-part,.skills-part {
+          display: flex;
+          width: 100%;
+          flex-flow: column nowrap;
+          align-items: flex-start;
+          span.education-degree {
+            padding-bottom: 3px;
+            padding-top: 5px;
+          }
+          span.skill-name {
+            display: flex;
+            width: 100%;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            line-height: 1.5;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    span.skill-other,
+    .projects-description,
+    .skill-description,
+    .job-description,
+    .education-degree-description,
+    .time-period {
+      font-size: smaller;
+      color:#424242;
+    }
+  }
+  .bar {
+    padding-right: 20%;
+    display: flex;
+    flex-flow: row nowrap;
+    .round {
+      width: 12px;
+      height: 12px;
+      margin: auto 2px;
+      background-color: #e0e0e0;
+      border-radius: 50%;
+    }
+    .deep {
+      background-color: #757575;
+    }
+  }
+  .footer {
+    font-size: smaller;
+    text-align: center;
+    padding: 10px 0 20px 0;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .icon {
+    width: 1.1em; height: 1.1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
 }
 </style>
