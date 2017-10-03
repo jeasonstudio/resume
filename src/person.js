@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const PERSON = {
+export const PERSON_cn = {
   name: {
     first: '赵吉彤'
   },
@@ -70,7 +70,7 @@ export const PERSON = {
   lang: 'cn' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
 };
 
-export const PERSON_en = {
+export const PERSON = {
   name: {
     first: 'Jeason'
   },
