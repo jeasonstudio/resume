@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const PERSON_cn = {
+export const PERSON = {
   name: {
     first: '赵吉彤'
   },
@@ -70,7 +70,7 @@ export const PERSON_cn = {
   lang: 'cn' // en, de, fr, pt, cn, it, es, th, pt-br, ru, sv, id, hu
 };
 
-export const PERSON = {
+export const PERSON_en = {
   name: {
     first: 'Jeason'
   },
@@ -83,19 +83,19 @@ export const PERSON = {
       company: 'Xiaomi Technology Co., Ltd',
       position: 'Software Developer',
       timeperiod: 'since June 2017',
-      description: 'Responsible for the development of Audio Operating Platform(React, Koa and Graphql)'
+      description: 'Responsible for the front and back ends development of internal operation platform(use React, Koa and Graphql)'
     }, {
       company: 'Zhongbaohui Technology Co., Ltd',
       position: 'Web Developer',
       timeperiod: 'July 2016 - October 2016',
-      description: 'Participated in the development of `BeikeCampus` and WeChatAPP with angularjs@1.x and WeUI.'
+      description: 'Participated in the development of the platform and WeChatAPP of `BeikeCampus` with angularjs@1.x and WeUI.'
     }],
   projects: [{
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/CN-VScode-Docs"><i class="fa fa-link" aria-hidden="true" /> VSCode Doc translation</a>',
     description: 'Open source in Github with 420+ star, 130+ fork'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/hulk"><i class="fa fa-link" aria-hidden="true" /> Hulk.js</a>',
-    description: 'An Express MiddleWare provides Mock data service for Restful API.'
+    description: 'An Express MiddleWare providing Mock data service for Restful API.'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio/Ripples.wxss"><i class="fa fa-link" aria-hidden="true" /> Ripples.wxss</a>',
     description: 'CSS3 Animation library for WeChatAPP.'
@@ -104,32 +104,32 @@ export const PERSON = {
     description: 'A weather webapp based on VueJS & PWA'
   }, {
     name: '<a target="_blank" style="text-decoration: blink;color: black;font-family:\'Source Sans Pro\', sans-serif;" href="https://github.com/jeasonstudio?utf8=%E2%9C%93&tab=repositories&q=&type=&language=go"><i class="fa fa-link" aria-hidden="true" /> GoLang projects</a>',
-    description: 'Web crawler of USTB edu system and zhihu, Simple image processing: GaussianBlur, Edge detection and so on.'
+    description: 'Development of USTB educational administration system & Zhihu crawler, Simple image processing.'
   }],
   education: [{
-      degree: 'USTB',
+      degree: 'University of Science and Technology Beijing',
       timeperiod: 'September 2015 - June 2019',
-      description: 'Junior students, major in computer science<br />Honors: Chinese College Computer Design Competition national first prize; "LanQiao Cup" national second prize and so on;'
+      description: 'Undergraduate Year 3. Major in computer science<br />Honors: Chinese College Computer Design Competition national first prize; "LanQiao Cup" national second prize, etc.'
     }],
   // skill level goes 0 to 100
   skills: [{
       name: 'HTML5 & CSS3',
       level: '70',
-      description: 'Worked in both Agile and Waterfall settings. Skilled use flex layout.'
+      description: 'Have engineering mode of thinking in front end design. Skilled in flex layout.'
     }, {
       name: 'JavaScript',
       level: '90',
-      description: 'Skilled use ES2016+, can build webapp via React, VueJS, angular.js.'
+      description: 'Skilled in ES2016+. Familiar with ReactJS. Master the application of Angular and VueJS, and understand the theories behind.'
     }, {
       name: 'Node.js',
       level: '50',
-      description: 'Skilled use Express, koa and Unit Testing, familiar with HTTP protocol,Understand the use of MySQL & MongoDB'
+      description: 'Skilled in Express, koa and Unit Testing. Familiar with HTTP protocol. Skilled in MySQL MongoDB.'
     }, {
       name: 'GoLang',
       level: '50',
-      description: 'Have the experience to build backend server, database middleware, web crawler and Image Processing via GoLang'
+      description: 'Have experience in GoLang back end development, database middleware, web crawler and Image Processing via GoLang'
     }],
-  skillDescription: '<br />Familiar with RestfulAPI and Graphql, knows how to dubug and performance optimization<br />There are data structures and algorithmic design basis and I like open source.<br />Familiar with Git, Gitflow and Linux, with full stack development capabilities;<br />I love life, love sports',
+  skillDescription: '<br />Familiar with RestfulAPI and Graphql, knows how to dubug and performance optimization<br />Have basic knowledge of data structure and algorithmic design. Love open source!<br />Familiar with Git, Gitflow and Linux, with full stack development capabilities;<br />I love life, love sports',
   contact: {
     email: 'me@jeasonstudio.cn',
     phone: '13220101996',

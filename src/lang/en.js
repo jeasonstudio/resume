@@ -5,7 +5,7 @@ const en = {
     experience: 'Internship Experience',
     projects: 'Personal Projects',
     education: 'Education',
-    skills: 'Skills',
+    skills: 'Professional Skills',
     about: 'About me'
   }
 };
