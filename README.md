@@ -25,3 +25,10 @@ best-resume-ever requires at least node v8.5.0
  5. Export with `npm run export`.
 
 All resumes will be exported to `/pdf`.
+
+## Tips
+
+<details>
+  <summary>Make sure you have some front-end development experience or else please...</summary>
+  <h1>Fuck off and do not bother me! </h1>
+</details>
