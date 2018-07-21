@@ -76,19 +76,27 @@
           <h4 v-text="lang.headings.contact" />
           <span v-if="person.contact.github">
             <a target="_blank" :href="person.contact.github" v-text="person.contact.github" />
-            <i class="fa fa-github" aria-hidden="true" />
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#jeason-resume-github"></use>
+            </svg>
           </span>
           <span v-if="person.contact.email">
             <a target="_blank" :href="'mailto:'+person.contact.email" v-text="person.contact.email" />
-            <i class="fa fa-envelope" aria-hidden="true" />
-          </span>
-          <span v-if="person.contact.phone">
-            <a target="_blank" :href="'tel:'+person.contact.phone" v-text="person.contact.phone" />
-            <i class="fa fa-phone" aria-hidden="true" />
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#jeason-resume-email"></use>
+            </svg>
           </span>
           <span v-if="person.contact.website">
             <a target="_blank" :href="person.contact.website" v-text="person.contact.website" />
-            <i class="fa fa-globe" aria-hidden="true" />
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#jeason-resume-blog"></use>
+            </svg>
+          </span>
+          <span v-if="person.contact.phone">
+            <a target="_blank" :href="'tel:'+person.contact.phone" v-text="person.contact.phone" />
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#jeason-resume-phone"></use>
+            </svg>
           </span>
         </div>
       </div>
@@ -113,7 +121,7 @@
           >
             <span class="skill-name">
               <span v-text="skill.name" />
-              <div class="bar">
+              <div class="bar" v-if="skill.level">
                 <span class="round deep" />
                 <span class="round" :class="{ deep: Number(skill.level) >= 20 }" />
                 <span class="round" :class="{ deep: Number(skill.level) >= 40 }" />
@@ -124,11 +132,14 @@
             <span class="skill-description" v-html="skill.description" />
           </div>
         </div>
-        <span class="skill-other" v-html="person.skillDescription" />
+        <div class="skill-other-title">
+          <h4 v-text="lang.headings.about" />
+          <span class="skill-other" v-html="person.skillDescription"></span>
+        </div>
       </div>
     </div>
     <div class="footer">
-      Copyright &copy; 2017 <a target="_blank" :href="person.contact.github">JeasonStudio</a>
+      Copyright &copy; 2015-2018 <a target="_blank" :href="person.contact.github">JeasonStudio</a> with <span class="hear-container"><div class="heart"></div></span>
     </div>
   </div>
 </template>
@@ -137,6 +148,7 @@
   import Vue from 'vue';
   import { getVueOptions } from './resumes';
   import '../assets/iconfont';
+  import '../assets/jrs/iconfont';
 
   let name = 'concise';
   export default Vue.component(name, getVueOptions(name));
@@ -145,7 +157,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 #concise {
-  font-family:'Source Sans Pro', sans-serif;
+  font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
   font-size:20px;
   padding-bottom:50px;
   display: flex;
@@ -175,7 +187,7 @@
   .image {
     width:130px;
     height:130px;
-    margin: 60px auto 20px auto;
+    margin: 45px auto 20px auto;
     .img {
       width:100%;
       height:100%;
@@ -191,14 +203,14 @@
     text-transform:uppercase;
     padding:5px 30px;
     margin-bottom:5px;
-    font-family:'Open Sans', sans-serif;
+    font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
     font-size:35px;
     font-weight:600;
     letter-spacing:10px;
   }
   .position {
     text-transform:uppercase;
-    font-family:'Open Sans', sans-serif;
+    font-family: "Helvetica Neue", helvetica, Arial, sans-serif;
     font-size:small;
     color:#757575;
     margin-bottom:10px;
@@ -243,7 +255,7 @@
       flex-grow: 1;
       width: 50%;
       padding: 0 30px 0 15px;
-      .education,.skills {
+      .education,.skills,.skill-other-title {
         display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
@@ -262,7 +274,7 @@
             flex-flow: row nowrap;
             justify-content: space-between;
             line-height: 1.5;
-            font-weight: 600;
+            font-weight: 400;
           }
         }
       }
@@ -302,10 +314,33 @@
     }
   }
   .icon {
-    width: 1.1em; height: 1.1em;
+    width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
   }
+}
+
+.hear-container {
+  margin: 2px 5px;
+}
+.heart {
+  background-color: #CC0033;
+  height: 8px;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #CC0033;
+  border-radius: 50%;
+  height: 8px;
+  position: absolute;
+  width: 8px;
+}
+.heart:before {
+  top: -4px;
+  left: 0;
 }
 </style>
